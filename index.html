@@ -1,10 +1,11 @@
-<style>*{font-size:50}button{width:100;height:100</style>
+<style>button{font-size:50;width:100;height:100</style>
 <body id=b><script>
 	z=3,Z=z*z,x=Z-1;
-	for(p=["x"],i=0;i<x;)p=[Z-++i,...p];
-	for(i=0;i<2*Z;i+=r-t?1:0)r=~~(new Date%x),t=~~(new Date%x),[p[r],p[t]]=[p[t],p[r]];
+	for(p="x",i=x;i;p=[i--,...p]);
+	for(i=0;i<2*Z;i+=r-t?1:0)[p[r],p[t]]=[p[t=new Date%x],p[r=new Date%x]];
 	m=n=>{
-		if((~~(n/z)==~~(x/z)&&(n+x)%2)||(N=n-x)==z||N==-z)p[x]=p[n],p[n]="x",x=n;
-		b.innerHTML=p.map((v,i)=>`${i%z?"":"<br>"}<button onclick=m(${i})>${v}</button>`).join("");
+		N=n-x;
+		if((~~(n/z)==~~(x/z)&&(n+x)%2)||N==z||N==-z)p[x]=p[n],p[n]="x",x=n;
+		b.innerHTML=p.map((v,i)=>`${i%z?"":"<br>"}<button onclick=m(${i})>${v}</button>`).join``
 	};m()
 </script>
